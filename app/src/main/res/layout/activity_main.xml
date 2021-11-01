@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPause"
+        android:layout_width="94dp"
+        android:layout_height="53dp"
+        android:onClick="onPauseClick"
+        android:text="Пауза"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonStart"
+        app:layout_constraintTop_toTopOf="@+id/buttonStart"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="36dp" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:onClick="onStartClick"
+        android:text="Запуск"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.235" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="102dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="onStopClick"
+        android:text="Стоп"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonPause" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="368dp"
+        android:layout_height="104dp"
+
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
